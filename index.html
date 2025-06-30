@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <br><br>
+    <div class="logo" style="text-align: center; width: 5%;">
+        <a href="index.html">
+            <img src="./assets/images/logo.png">
+        </a>
+    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="FALCON: Resolving Visual Redundancy and Fragmentation in High-resolution Multimodal Large Language Models via Visual Registers">
+    <title>FALCON: Resolving Visual Redundancy and Fragmentation in High-resolution Multimodal Large Language Models via Visual Registers</title>
+    <script>
+
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="./static/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title" style="font-weight: bold; font-size: 45px;">
+                            FALCON: Resolving Visual Redundancy and Fragmentation in High-resolution Multimodal Large Language Models via Visual Registers
+                        </h1>
+                        <h2 style="font-weight: bold; font-size: 32px;">ICCV 2025</h2>
+
+                        <span class="author-block">
+                            <a href="https://scholar.google.com/citations?user=iMJYtvwAAAAJ" target="_blank">Renshan&#160;Zhang</a><sup>1</sup>,
+                            <a href="https://rshaojimmy.github.io/OrionLab/" target="_blank">Rui&#160;Shao</a><sup>1&#9993;</sup>,
+                            <a href="https://scholar.google.com/citations?user=Mpg0w3cAAAAJ" target="_blank">Gongwei&#160;Chen</a><sup>1</sup>,
+                            <a href="https://faculty.hitsz.edu.cn/zhangmiao" target="_blank">Miao Zhang</a><sup>1</sup>,
+                            <br>
+                            <a href="https://jnhujnhu.github.io/" target="_blank">Kaiwen&#160;Zhou</a><sup>2</sup>,
+                            <a href="https://faculty.hitsz.edu.cn/guanweili" target="_blank">Weili&#160;Guan</a><sup>1</sup>,
+                            <a href="https://liqiangnie.github.io/" target="_blank">Liqiang&#160;Nie</a><sup>1&#9993;</sup>
+                        </span>
+                        <div class="is-size-5 publication-authors" style="font-size: 10px;">
+                            <span class="author-block"><sup>1</sup>Harbin Institute of Technology,
+                                Shenzhen&#160;&#160;&#160;</span>
+                            <span class="author-block"><sup>2</sup>Huawei Noah’s Ark Lab</span>
+                        </div>
+                        <div class="is-size-5 publication-authors" style="font-size: 10px;">
+                            <span class="author-block"><sup>&#9993;&#160;</sup>Corresponding
+                                author&#160;&#160;</span>
+                        </div>
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <span class="link-block">
+                                    <a target="_blank" href="https://arxiv.org/abs/2501.16297"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="ai ai-arxiv"></i>
+                                        </span>
+                                        <span>arXiv</span>
+                                    </a>
+                                </span>
+
+                                <span class="link-block">
+                                    <a target="_blank" href="https://arxiv.org/pdf/2501.16297"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </span>
+                                        <span>PDF</span>
+                                    </a>
+                                </span>
+                                <!-- Code Link. -->
+                                <span class="link-block">
+                                    <a target="_blank" href="https://github.com/JiuTian-VL/JiuTian-FALCON"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a>
+                                </span>
+                                <br />
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section" style="background-color:#efeff081">
+        <div class="container is-max-desktop">
+            <!-- Abstract. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p style="font-size: 125%">
+                            The incorporation of high-resolution visual input equips multimodal large language models (MLLMs) with
+                            enhanced visual perception capabilities for real-world tasks. However, most existing high-resolution MLLMs
+                            rely on a cropping-based approach to process images, which leads to fragmented visual encoding and a sharp
+                            increase in redundant tokens. To tackle these issues, we propose the <b>FALCON</b> model. FALCON introduces
+                            a novel <b>visual register</b> technique to simultaneously: <b>1) Eliminate redundant tokens
+                            at the stage of visual encoding.</b> To directly address the visual redundancy present in the output of vision
+                            encoder, we propose a Register-based Representation Compacting (<b>ReCompact</b>) mechanism. This mechanism
+                            introduces a set of learnable visual registers designed to adaptively aggregate essential information while
+                            discarding redundancy. It enables the encoder to produce a more compact visual representation with a minimal
+                            number of output tokens, thus eliminating the need for an additional compression module. <b>2) Ensure continuity
+                            in visual encoding.</b> To address the potential encoding errors caused by fragmented visual inputs, we develop
+                            a Register Interactive Attention (<b>ReAtten</b>) module. This module facilitates effective and efficient
+                            information exchange across sub-images by enabling interactions between visual registers. It ensures the
+                            continuity of visual semantics throughout the encoding. We conduct comprehensive experiments with
+                            FALCON on high-resolution benchmarks across a wide range of scenarios. FALCON demonstrates superior performance
+                            with a remarkable <b>9-fold</b> reduction in visual tokens. FALCON is open-sourced and publicly available at
+                            <a href="https://github.com/JiuTian-VL/JiuTian-FALCON" target="_blank" rel="noopener noreferrer">https://github.com/JiuTian-VL/JiuTian-FALCON</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section" style="background-color:#ffffff">
+        <div class="container is-max-widescreen">
+            <div class="rows">
+                <div class="rows is-centered ">
+                    <div class="row is-full-width">
+                        <h2 class="title is-3">Overview framework of our GUI-explorer</h2>
+                        <img src="assets/images/FALCON_arch.png" class="interpolation-image" alt=""
+                            style="display: block; margin-left: auto; margin-right: auto" />
+                        <br>
+                        <span style="font-size: 110%">
+                            We propose FALCON, which addresses the issues of visual redundancy and fragmentation in high-resolution
+                            understanding of MLLMs in a unified manner through the proposed visual register mechanism. It synergizes
+                            two essential components: (1) To directly eliminate redundancy during visual encoding, we propose
+                            <b>Register-based Representation Compacting (ReCompact)</b> mechanism. This mechanism introduces a set of
+                            learnable visual registers, which are paired with image tokens from each sub-image and fed into the vision
+                            encoder to capture rich visual information. (2) To ensure the  continuity of visual semantics throughout the
+                            encoding, a novel <b>Register Interactive Attention (ReAtten)</b> module  is integrated into the Vision
+                            Transformer to facilitate information exchange between sub-images via the visual registers. Finally, the
+                            compact visual representations produced by the visual registers are processed through a simple MLP module
+                            before being fed into the LLM for further analysis.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- result -->
+    <section class="section" style="background-color:#efeff081">
+        <div class="container is-max-widescreen">
+            <div class="rows">
+                <div class="rows is-centered ">
+                    <div class="row is-full-width">
+                        <h2 class="title is-3"><span class="dvima">Experiment</span></h2>
+                        <span style="font-size: 110%"></span>
+
+                        <h1><span class="dvima">Table 1: Main Results of FALCON on MME-RealWorld.</span></h1>
+                        <img src="assets/images/mme-rw.png" class="interpolation-image" alt="" width="1050"
+                             style="display: block; margin-left: auto; margin-right: auto" />
+                        <br>
+
+
+                        <div class="image-container">
+                            <h1><span class="dvima">Table 2 and 3: Main Results of FALCON on More Diverse Benchmarks. </span></h1>
+                            <div class="image-wrapper">
+                                <img src="assets/images/hires_bench.png" alt="" width="500"
+                                    style="margin-left: auto; margin-right: auto" />
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="assets/images/general_bench.png" alt="" width="537"
+                                    style="margin-left: auto; margin-right: auto" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color:#ffffff">
+        <div class="container is-max-widescreen">
+            <div class="rows">
+                <div class="rows is-centered ">
+                    <div class="row is-full-width">
+                        <h2 class="title is-3"><span class="dvima">Qualitative Results</span></h2>
+                        <span style="font-size: 110%"></span>
+
+
+<!--                        <h1><span class="dvima">Visualization of the register-to-image attention map.</span></h1>-->
+                        <img src="assets/images/register_attn.png" class="interpolation-image" alt="" width="1050"
+                             style="display: block; margin-left: auto; margin-right: auto" />
+                        <br>
+                        <span style="font-size: 110%">
+                            <b>Visualization of the register-to-image attention map.</b>
+                            As shown in <b>Figure (b)</b>, each visual register focuses on specific parts of the image,
+                            capturing rich visual patterns. Meanwhile, registers pay minimal attention to background
+                            areas, effectively avoiding the inclusion of redundancy. <b>As shown in Figure (c)</b>, in the
+                            ViT model without ReAtten, the attention patterns across different sub-images appear extremely
+                            fragmented. In contrast, the ViT model with ReAtten shows continuous attention patterns,
+                            indicating effective information interaction between sub-images.
+                        </span>
+                        <br><br><br>
+
+
+                        <div class="image-container">
+<!--                            <h1><span class="dvima">Case Study on Diverse Tasks.</span></h1>-->
+                            <div class="image-wrapper">
+                                <img src="assets/images/vqa_1.png" alt="" width="600"
+                                    style="margin-left: auto; margin-right: auto" />
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="assets/images/vqa_2.png" alt="" width="470"
+                                    style="right: auto; margin-right: auto" />
+                            </div>
+                        </div>
+                        <br>
+                        <span style="font-size: 110%">
+                            <b>Case Study on Diverse Tasks.</b>
+                            The figures in left illustrate FALCON's exceptional ability to recognize small objects and text in natural scenes,
+                            demonstrating its capability to capture rich, fine-grained details in high-resolution images.
+                            The figure in right highlights FALCON's proficiency in understanding and summarizing high-resolution document images
+                            with dense text, while also demonstrating its sensitivity to small text elements.
+                            These examples demonstrate FALCON's remarkable capabilities across various high-resolution vision-language tasks.
+                        </span>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--Conclusion-->
+    <section class="section" style="background-color:#efeff081">
+        <div class="container is-max-widescreen">
+            <div class="rows">
+                <div class="rows is-centered ">
+                    <div class="row is-full-width">
+                        <h2 class="title is-3"><span class="dvima">Conclusion</span></h2>
+
+                        <p style="font-size: 125%">
+                            To address the visual redundancy and fragmentation in high-resolution MLLMs, we propose FALCON.
+                            FALCON employs an innovative visual register technique that simultaneously addresses both challenges.
+                            This technique uses a ReCompact mechanism to adaptively aggregate essential visual information through
+                            visual registers, creating a compact, non-redundant representation. Additionally, a novel ReAtten module
+                            is introduced to facilitate information exchange among sub-images via visual registers, thereby enhancing
+                            visual continuity during encoding. Extensive experiments demonstrate FALCON’s superiority in high-resolution
+                            understanding and validate the effectiveness of the proposed ReCompact and ReAtten.
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="BibTeX">
+        <div class="container is-max-widescreen content">
+            <h2 class="title">BibTeX</h2>
+            <pre><code>@InProceedings{zhang2025falcon,
+    author={Zhang, Renshan and Shao, Rui and Chen, Gongwei and Zhang, Miao and Zhou, Kaiwen and Guan, Weili and Nie, Liqiang},
+    title={FALCON: Resolving Visual Redundancy and Fragmentation in High-resolution Multimodal Large Language Models via Visual Registers},
+    booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month= {October},
+    year={2025},
+}</code></pre>
+        </div>
+    </section>
+
+</body>
+
+</html>
